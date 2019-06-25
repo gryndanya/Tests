@@ -262,13 +262,13 @@ describe('NewLib', function () {
     });
 
     describe('Unicode', function () {
-        let expected = ;
-
-        it('should ' + expected, function () {
+        let expected = true;
+        
+        it('Unicode regex :  ' + expected, function () {
 
             function MakeTest() {
-                let ans = ;
-                return ans;
+                let regex = new RegExp('\u{61}', 'u');
+                return regex.unicode;
             }
             let result = MakeTest();
             assert.equal(result, expected);
